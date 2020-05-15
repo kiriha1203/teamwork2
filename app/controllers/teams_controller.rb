@@ -59,6 +59,6 @@ class TeamsController < ApplicationController
   end
 
   def owner_only_edit
-    redirect_to @team, notice: I18n.t('views.messages.no_authority')
+    redirect_to @team, notice: I18n.t('views.messages.no_authority') unless current_user.id == @team.owner_id
   end
 end
