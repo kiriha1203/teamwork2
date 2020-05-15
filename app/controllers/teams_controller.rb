@@ -42,6 +42,7 @@ class TeamsController < ApplicationController
     @new_owner = User.find(params[:format])
     @team.update_attributes(owner_id: @new_owner.id)
     redirect_to @team, notice: I18n.t('views.messages.change_owner')
+    ChangeOwnerMailer.change_owner_mail(@new_owner, @team).deliver
   end
 
   def destroy
