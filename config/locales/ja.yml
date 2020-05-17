@@ -253,6 +253,7 @@ ja:
       posted_articles: '投稿した記事一覧'
       change_owner: 'リーダーを変更しました'
       you_owner: 'あなたがチームリーダーになりました'
+      no_authority: '権限がありません'
     button:
       submit: '投稿'
       edit: '編集'
