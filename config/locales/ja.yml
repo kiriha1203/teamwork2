@@ -254,6 +254,7 @@ ja:
       change_owner: 'リーダーを変更しました'
       you_owner: 'あなたがチームリーダーになりました'
       no_authority: '権限がありません'
+      not_change_owner: '本人に権限は渡せません'
     button:
       submit: '投稿'
       edit: '編集'
