@@ -44,8 +44,8 @@ class TeamsController < ApplicationController
       redirect_to @team, notice: I18n.t('views.messages.not_change_owner')
     else
       @team.update_attributes(owner_id: @new_owner.id)
-      redirect_to @team, notice: I18n.t('views.messages.change_owner')
       ChangeOwnerMailer.change_owner_mail(@new_owner, @team).deliver
+      redirect_to @team, notice: I18n.t('views.messages.change_owner')
     end
   end
 
